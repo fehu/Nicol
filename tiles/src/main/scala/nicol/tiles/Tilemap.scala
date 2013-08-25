@@ -69,7 +69,7 @@ object Tilemap {
         }
       }
 
-      val tiles = importer(data.text).map(_.map(n => tset(n)))
+      val tiles = importer(data.text).map(_.map(n => tset(n).asInstanceOf[Tile]))
       new TileLayer(tiles, tset.tileSize, level.toFloat)
     }
 

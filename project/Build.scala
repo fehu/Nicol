@@ -4,11 +4,12 @@ import Keys._
 object General {
   val settings = Defaults.defaultSettings ++ LWJGLPlugin.lwjglSettings ++ Seq(
     organization := "com.github.scan",
-    scalaVersion := "2.9.2",
+    scalaVersion := "2.10.2",
     version := "0.1.2",
     crossScalaVersions := Seq("2.9.1", "2.9.2"),
     credentials += Credentials(Path.userHome / ".ivy2" / ".credentials"),
     libraryDependencies ++= Seq(
+      "com.typesafe.akka" %% "akka-actor" % "2.2.0",
       "ch.qos.logback" % "logback-classic" % "1.0.6",
       "org.scalacheck" %% "scalacheck" % "1.10.0" % "test",
       "com.dadrox" %% "sbt-junit" % "0.1" % "test"
